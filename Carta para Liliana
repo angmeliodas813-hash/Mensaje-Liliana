@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Una carta especial 💌</title>
+
+    <style>
+        body {
+            background: linear-gradient(180deg, #ffe6f0, #ffffff);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .carta {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            text-align: center;
+            animation: aparecer 1.5s ease;
+        }
+
+        h1 {
+            color: #e91e63;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .firma {
+            margin-top: 25px;
+            font-weight: bold;
+            color: #e91e63;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carta">
+        <h1>Para ti 💖</h1>
+
+        <p>
+            Quería escribirte estas palabras para recordarte lo especial que eres.
+            A veces no se dice lo suficiente, pero tu presencia hace las cosas más bonitas.
+        </p>
+
+        <p>
+            Gracias por cada momento, por cada sonrisa y por estar.
+            Esta carta es pequeña, pero está hecha con mucho cariño.
+        </p>
+
+        <p class="firma">
+            Con cariño,<br>
+            Ángel 💌
+        </p>
+    </div>
+
+</body>
+</html>
