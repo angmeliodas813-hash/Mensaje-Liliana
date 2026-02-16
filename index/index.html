@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carta Secreta 💖</title>
+    <style>
+        body {
+            background: linear-gradient(180deg, #ffe6f0, #ffffff);
+            font-family: "Georgia", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .caja {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            width: 80%;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-top: 15px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+            background: #e75480;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #d6456f;
+        }
+
+        .carta {
+            display: none;
+            animation: aparecer 1.5s ease;
+        }
+
+        h1 {
+            color: #e75480;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .firma {
+            margin-top: 30px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="caja" id="login">
+    <h1>💌 Carta Secreta</h1>
+    <p>Ingresa la contraseña para leerla</p>
+    <input type="password" id="clave" placeholder="Contraseña">
+    <br>
+    <button onclick="verificar()">Abrir carta 💖</button>
+    <div class="error" id="error"></div>
+</div>
+
+<div class="caja carta" id="carta">
+    <h1>Para ti, amada mía 💖</h1>
+
+    <p>
+        Quería escribirte esta carta para decirte lo importante que eres para mí.
+        A veces las palabras no alcanzan, pero espero que estas líneas te hagan
+        sonreír y sentir todo el cariño que llevo dentro.
+    </p>
+
+    <p>
+        Quiero que sepas que siempre te voy a apoyar, en todas tus decisiones.
+        Gracias por estar, por tu tiempo y por cada momento compartido.
+        Esta carta es solo un pequeño detalle, pero está hecha con mucho corazón.
+    </p>
+
+    <div class="firma">
+        Con cariño,<br>
+        <strong>Ángel</strong>
+    </div>
+</div>
+
+<script>
+function verificar() {
+    const correcta = "08052025"; // ← CAMBIA AQUÍ LA CONTRASEÑA
+    const input = document.getElementById("clave").value;
+
+    if (input === correcta) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("carta").style.display = "block";
+    } else {
+        document.getElementById("error").innerText = "Contraseña incorrecta 💔";
+    }
+}
+</script>
+
+</body>
+</html>
