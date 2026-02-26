@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carta para Liliana💘</title>
+  <style>
+    body {
+      background: linear-gradient(180deg, #ffe6f0, #fff);
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+    .carta {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <div class="carta">
+    <h1>Querida Liliana</h1>
+    <p>Oña amort te hago esta carta por que te queria decir esto.
+Tu eres perfecta como eres, no dejes que nadie te diga algo malo sobre ti, tu eres hermosa mas que las otras mujeres.
+Eres la mejor persona que e conocido en mi vida, yo se que solo somos unos adolescentes y  estamos aprendiendo a amar pero yo si quiero que tu seas mi futura esposa.
+Bueno eso es todo te amo musho. </p>
+    <p>Con amor,</p>
+    <p>[Ángel (tu futuro esposo)]</p>
+  </div>
+</body>
+</html>
