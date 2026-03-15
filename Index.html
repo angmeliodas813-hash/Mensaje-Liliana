@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Carta para Liliana 💘</title>
-  <style>
-    body {
-      background: linear-gradient(180deg, #ffe6f0, #fff);
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+<meta charset="UTF-8">
+<title>Para Ti ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#ff9a9e,#fad0c4);
+    font-family:Arial, sans-serif;
+    overflow:hidden;
+}
+
+.carta{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    z-index:2;
+}
+
+h1{
+    color:#ff4d6d;
+}
+
+.corazon{
+    position:absolute;
+    color:red;
+    font-size:20px;
+    animation:flotar 6s linear infinite;
+}
+
+@keyframes flotar{
+    0%{
+        transform:translateY(100vh);
+        opacity:1;
     }
-    .carta {
-      background: white;
-      padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-      max-width: 600px;
+    100%{
+        transform:translateY(-10vh);
+        opacity:0;
     }
-    h1 {
-      color: #d63384;
-    }
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
-  <div class="carta">
-    <h1>Querida Liliana</h1>
 
-    <p>
-      Oña, amor, te hago esta carta porque te quería decir algo muy importante.
-      Tú eres perfecta como eres, no dejes que nadie diga cosas malas sobre ti.
-      Eres hermosa, más de lo que imaginas.
-    </p>
+<div class="carta">
+<h1>Para Ti 💖</h1>
+<p>
+Oñas te amos mushio pol favol nunca me abandones o te denuncio por abandono JAJAJAJAJAJAJ ño mentira ❤️
+</p>
+</div>
 
-    <p>
-      Eres la mejor persona que he conocido en mi vida. Yo sé que solo somos adolescentes
-      y que estamos aprendiendo a amar, pero de verdad quiero que tú seas mi futura esposa.
-    </p>
+<script>
 
-    <p>Bueno, eso es todo. Te amo mucho 💖</p>
+function crearCorazon(){
+    const corazon=document.createElement("div");
+    corazon.classList.add("corazon");
+    corazon.innerHTML="❤️";
 
-    <p>Con amor,</p>
-    <p><strong>Ángel (tu futuro esposo)</strong></p>
-  </div>
+    corazon.style.left=Math.random()*100+"vw";
+    corazon.style.animationDuration=(3+Math.random()*3)+"s";
+
+    document.body.appendChild(corazon);
+
+    setTimeout(()=>{
+        corazon.remove();
+    },6000);
+}
+
+setInterval(crearCorazon,300);
+
+</script>
+
 </body>
 </html>
